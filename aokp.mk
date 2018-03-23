@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit some common A6000 stuff.
+$(call inherit-product, device/lenovo/a6000/full_a6000.mk)
+
 # Inherit some common AOKP stuff.
 $(call inherit-product, vendor/aokp/configs/common_full_phone.mk)
 
@@ -23,7 +26,9 @@ TARGET_BOARD_PLATFORM_VARIANT := msm8916
 TARGET_OTA_ASSERT_DEVICE := Kraft-T,a6000,K30-T,A6000,Kraft-W,Kraft-C,k30t,msm8916,Kraft-A6000,wt86518
 
 PRODUCT_NAME := aokp_a6000
+PRODUCT_DEVICE := a6000
 BOARD_VENDOR := Lenovo
+PRODUCT_BRAND := Lenovo
 
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -32,6 +37,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=a6000
+    
 # Boot animation
 TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
+TARGET_BOOT_ANIMATION_RES := 720
