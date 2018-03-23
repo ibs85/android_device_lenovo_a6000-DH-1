@@ -1,0 +1,1 @@
+add_lunch_combo slim_a6000-userdebug
