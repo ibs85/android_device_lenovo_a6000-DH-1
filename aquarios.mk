@@ -16,6 +16,9 @@
 # Inherit some common A6000 stuff.
 $(call inherit-product, device/lenovo/a6000/full_a6000.mk)
 
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
 # Inherit some common AquariOS stuff.
 $(call inherit-product, vendor/aquarios/products/aquarios_phone.mk)
 
