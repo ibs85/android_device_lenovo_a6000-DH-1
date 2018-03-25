@@ -1,0 +1,1 @@
+add_lunch_combo fh_a6000-userdebug
